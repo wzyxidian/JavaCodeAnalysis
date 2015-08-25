@@ -4,6 +4,7 @@ public class IntegerTest {
 
 	/**
 	 * @param args
+	 * @return 
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -42,13 +43,55 @@ public class IntegerTest {
 		
 		//5.测试getChars(int i, int index, char[] buf)方法，toString(i)方法中含有getChars方法
 		//这个方法是默认的方法，所以不能直接调用测试
+		System.out.println("测试toString方法");
 		str = Integer.toString(-65537);
 		System.out.println("将十进制的-65537转换为字符串："+str);
 		
 		//6.测试parseInt(String s,int radix)方法//s表示的是以radix为基数的整数，（32，4）表示32是4进制的整数，转换成十进制为3*4+2
+		System.out.println("测试parseInt(String s,int radix)方法");
 		num = Integer.parseInt("32",4);
 		System.out.println("将字符串32转换成十进制整数："+num);
 		
+		//7.测试parseInt(String s)方法//s表示的是以10为基数的整数,他的本质还是调用parseInt(String s,10)方法
+		System.out.println("测试parseInt(String s,int radix)方法");
+		num = Integer.parseInt("32");
+		System.out.println("将字符串32转换成十进制整数："+num);
+		
+		//8.测试valueOf(String s, int radix)方法，他的本质还是调用parseInt(String s,int radix)方法
+		System.out.println("测试valueOf(String s, int radix)方法");
+		num = Integer.valueOf("32",4);
+		System.out.println("将字符串32转换成十进制整数："+num);
+		
+		//9.测试valueOf(String s)方法，他的本质还是调用parseInt(String s,int 10)方法
+		System.out.println("测试valueOf(String s)方法");
+		num = Integer.valueOf("32");
+		System.out.println("将字符串32转换成十进制整数："+num);
+		
+		//9.测试Integer(String s)构造方法，他的本质还是调用parseInt(String s,int 10)方法
+		System.out.println("测试Integer(String s)构造方法");
+		num = new Integer("32");
+		System.out.println("将字符串32转换成十进制整数："+num);
+		
+		//10.测试toString()方法，没有参数的方法，实际上调用的是toString(int i)方法
+		System.out.println("测试toString无参数方法");
+		Integer i = new Integer(5);
+		str = i.toString();		
+		System.out.println("将十进制的5转换为字符串："+str);
+		System.out.println("将十进制的5转换为byte类型："+ i.byteValue());
+		System.out.println("将十进制的5转换为short类型："+i.shortValue());
+		System.out.println("将十进制的5转换为long类型："+i.longValue());
+		System.out.println("将十进制的5转换为int类型："+i.intValue());
+		System.out.println("将十进制的5转换为float类型："+i.floatValue());
+		System.out.println("将十进制的5转换为double类型："+i.doubleValue());
+		System.out.println("将十进制的5转换为hashCode："+i.hashCode());
+		
+		//11.测试equals(Object obj)
+		System.out.println("测试equals(Object obj)方法");
+		Integer in = new Integer(5);
+		if(i.equals(in)){
+			System.out.println("测试成功");
+		}
+		
 	}
-
+	
 }
