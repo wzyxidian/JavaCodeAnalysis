@@ -1,10 +1,12 @@
 package cn.edu.xidian.sse.datatype;
 
+import java.util.Vector;
+
 public class IntegerTest {
 
 	/**
-	 * @param args
-	 * @return 
+	 * @author zhiyong wang
+	 * @exception to test the method of Integer 
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -118,37 +120,65 @@ public class IntegerTest {
 		System.out.println("得到系统属性的情况下：getInteger(String nm)方法返回结果："+num);	
 		System.out.println("未得到系统属性的情况下：getInteger(String nm)方法返回结果："+Integer.getInteger(null));
 		
-		//17.测试getInteger(String nm)方法,他调用的是getInteger(String nm, null)方法
+		//18.测试getInteger(String nm)方法,他调用的是getInteger(String nm, null)方法
 		System.out.println("-------测试getInteger(String nm, int val)方法-------");
 		num = Integer.getInteger("sun.arch.data.model", 5);
 		System.out.println("得到系统属性的情况下：getInteger(String nm, int val)方法返回结果："+num);	
 		System.out.println("未得到系统属性的情况下：getInteger(String nm, int val)方法返回结果："+Integer.getInteger(null,5));
 	
-		//18.测试compare(int x, int y)方法
+		//19.测试compare(int x, int y)方法
 		System.out.println("-------测试compare(int x, int y)方法-------");
 		System.out.println("相等情况下：compare(5, 5)方法返回结果："+Integer.compare(5, 5));
 		System.out.println("小于情况下：compare(4, 5)方法返回结果："+Integer.compare(4, 5));
 		System.out.println("大于情况下：compare(5, 6)方法返回结果："+Integer.compare(5, 6));
 		
-		//19.测试compareTo(Integer anotherInteger)方法,实际上是调用上面compare方法
+		//20.测试compareTo(Integer anotherInteger)方法,实际上是调用上面compare方法
 		System.out.println("-------测试compareTo(Integer anotherInteger)方法-------");
 		Integer a = 5;
 		System.out.println("相等情况下：compareTo(5)方法返回结果："+a.compareTo(5));
 		System.out.println("小于情况下：compareTo(6)方法返回结果："+a.compareTo(6));
 		System.out.println("大于情况下：compareTo(4)方法返回结果："+a.compareTo(4));
 		
-		//20.测试highestOneBit(int i)方法
+		//21.测试highestOneBit(int i)方法
 		System.out.println("-------测试highestOneBit(int i)方法-------");
 		System.out.println("highestOneBit(int i): " + Integer.highestOneBit(6));
 				
-		//21.测试lowestOneBit(int i)方法
+		//22.测试lowestOneBit(int i)方法
 		System.out.println("-------测试lowestOneBit(int i)方法-------");
 		System.out.println("lowestOneBit(5): " + Integer.lowestOneBit(5));
 		
-		//22.测试numberOfLeadingZeros（int i）方法
+		//23.测试numberOfLeadingZeros（int i）方法
 		System.out.println("-------测试numberOfLeadingZeros(int i)方法-------");
 		System.out.println("numberOfLeadingZeros(2): " + Integer.numberOfLeadingZeros(2));
 		
+		//24.测试numberOfTrailingZeros（int i）方法
+		System.out.println("-------测试numberOfTrailingZeros(int i)方法-------");
+		System.out.println("numberOfTrailingZeros(2): " + Integer.numberOfTrailingZeros(2));
+		
+		//25.测试bitCount（int i）方法
+		System.out.println("-------测试bitCount(int i)方法-------");
+		System.out.println("bitCount(5): " + Integer.bitCount(5));
+		
+		//26.测试rotateLeft(int i, int distance)方法,rotateRight(int i, int distance)方法
+		System.out.println("-------测试rotateLeft(int i, int distance)方法，rotateRight(int i, int distance)方法-------");
+		System.out.println("rotateLeft(5,2): " + Integer.rotateLeft(5, 2));
+		System.out.println("rotateRight(5,2): " + Integer.rotateRight(5, 2));
+			
+		//27.测试reverse(int i)方法
+		System.out.println("-------测试reverse(int i)方法-------");
+		System.out.println("reverse(5): " + Integer.reverse(5));
+		
+		//28.测试signum(int i)方法
+		System.out.println("-------测试signum(int i)方法-------");
+		System.out.println("signum(5): " + Integer.signum(5));
+		System.out.println("signum(0): " + Integer.signum(0));
+		System.out.println("signum(-5): " + Integer.signum(-5));
+		
+		//29.测试reverseBytes(int i)方法
+		System.out.println("-------测试reverseBytes(int i)方法-------");
+		System.out.println("reverseBytes(5): " + Integer.reverseBytes(5));
+		
+	
 	}
 	
 }

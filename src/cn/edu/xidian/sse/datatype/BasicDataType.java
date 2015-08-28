@@ -13,6 +13,7 @@ public class BasicDataType {
 //		p.setVar("it");
 //		System.out.println(p.getVar().toString());	
 //		fun(p);
+		Boolean flag =  new Boolean("s");
 	}
 //	public static void fun(point<?> str){
 //		System.out.println(str.getVar());
