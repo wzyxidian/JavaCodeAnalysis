@@ -14,6 +14,7 @@ public class BasicDataType {
 //		System.out.println(p.getVar().toString());	
 //		fun(p);
 		Boolean flag =  new Boolean("s");
+		
 	}
 //	public static void fun(point<?> str){
 //		System.out.println(str.getVar());
