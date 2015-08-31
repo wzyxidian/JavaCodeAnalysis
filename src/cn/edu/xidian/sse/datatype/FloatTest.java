@@ -20,6 +20,7 @@ public class FloatTest {
 		System.out.println("Float.TYPE的值是：" + Float.TYPE);
 		
 		System.out.println("\r\n******Float的方法******");
+		System.out.println("" + Float.toString(1.2f));
 		
 		
 	}
