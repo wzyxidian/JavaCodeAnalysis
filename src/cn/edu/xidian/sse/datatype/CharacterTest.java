@@ -68,10 +68,15 @@ public class CharacterTest {
 		
 		System.out.println("\r\n******Character的方法******");
 		System.out.println("******这里与Integer类似的方法将不再介绍******\r\n");
-		//将char类型的数据进行封装成Character
-		
+		//将char类型的数据进行封装成Character		
 		System.out.println("Character的构造函数Character(char 'c') ：" + c);
+		System.out.println("c.toString()：" + c.toString());
 		System.out.println("Character.toString(char a)：" + Character.toString('c'));
+		System.out.println("Character.charCount(int codePoint)：" + Character.charCount(65536));
+		System.out.println("Character.getName(char a)：" + Character.getName(123));
+		System.out.println("Character.toString(char a)：" + Character.toString('c'));
+		System.out.println("Character.toString(char a)：" + Character.toString('c'));
+		
 	}
 
 }
